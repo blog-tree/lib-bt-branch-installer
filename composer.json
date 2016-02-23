@@ -1,0 +1,31 @@
+{
+    "name": "blog-tree/lib-composer-bt-installer",
+    "description": "The way for install BlogTree extensions in right path",
+    "keywords": ["lib", "composer", "lib-path"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "support": {
+        "forum": "http://blog-tree.com",
+        "issues": "http://blog-tree.com"
+    },
+    "homepage": "http://blog-tree.com",
+    "type": "composer-plugin",
+    "require": {
+        "php" : ">=5.6",
+        "composer-plugin-api": "^1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "bt\\composer": "./"
+        }
+    },
+    "extra": {
+        "class": "bt\\composer\\BlogTreeInstallerPlugin"
+    },
+    "authors": [
+        {
+            "name": "Alexander Zagovorichev",
+            "email": "zagovorichev@gmail.com"
+        }
+    ]
+}
