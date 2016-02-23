@@ -4,7 +4,7 @@
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
-class BlogTreeInstaller extend LibraryInstaller
+class BlogTreeInstaller extends LibraryInstaller
 {
   const EXT_NAME_KEY = 'bt-extension-name';
   
@@ -25,7 +25,5 @@ class BlogTreeInstaller extend LibraryInstaller
           $targetDir = $package->getTargetDir();
           return $basePath . ($targetDir ? '/'.$targetDir : '');
         }
-        $this->io->writeError('    <warning>Skipped installation of bin '.$bin.' for package '.$package->getName().': file not found in package</warning>');
     }
-  
 }
