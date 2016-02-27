@@ -1,7 +1,7 @@
 {
-    "name": "blog-tree/lib-composer-bt-installer",
-    "description": "The way for install BlogTree extensions in right path",
-    "keywords": ["lib", "composer", "lib-path"],
+    "name": "blog-tree/lib-bt-composer-installer",
+    "description": "The way for install Blog-Tree extensions in right path",
+    "keywords": ["bt", "bt-composer", "bt-lib-path", "Blog-Tree"],
     "license": "MIT",
     "minimum-stability": "dev",
     "support": {
