@@ -7,6 +7,7 @@ use Composer\Installer\LibraryInstaller;
 class BlogTreeInstaller extends LibraryInstaller
 {
   const EXT_NAME_KEY = 'bt-extension-name';
+  const EXT_TYPE = 'bt-extension';
   
   /**
    * Install extensions before vendor dir
@@ -29,6 +30,6 @@ class BlogTreeInstaller extends LibraryInstaller
     
     public function supports($packageType)
     {
-        return self::EXT_NAME_KEY === $packageType;
+        return self::EXT_TYPE === $packageType;
     }
 }
