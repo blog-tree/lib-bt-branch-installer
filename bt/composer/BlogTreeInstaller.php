@@ -26,4 +26,9 @@ class BlogTreeInstaller extends LibraryInstaller
           return $basePath . ($targetDir ? '/'.$targetDir : '');
         }
     }
+    
+    public function supports($packageType)
+    {
+        return self::EXT_NAME_KEY === $packageType;
+    }
 }
