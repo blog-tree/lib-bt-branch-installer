@@ -14,8 +14,8 @@
         "composer-plugin-api": "^1.0"
     },
     "autoload": {
-        "psr-0": {
-            "bt\\composer": "./"
+        "psr-4": {
+            "bt\\composer\\": ""
         }
     },
     "extra": {
