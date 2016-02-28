@@ -15,16 +15,17 @@ class BlogTreeInstaller extends LibraryInstaller
     public function getInstallPath(PackageInterface $package)
     {
         $this->initializeVendorDir();
-        $basePath = ($this->vendorDir ? $this->vendorDir.'/' : '') . $package->getPrettyName();
+        $basePath = $this->vendorDir ? $this->vendorDir : '';
         
         $extras = $package->getExtra();
         if (!is_null($extras) && isset($extras[self::EXT_NAME_KEY]) && !empty($extras[self::EXT_NAME_KEY])) {
           // get extension
-          return $basePath . '../' . $extras[self::EXT_NAME_KEY];
+          return $basePath . DIRECTORY_SEPARATOR .  '..' . DIRECTORY_SEPARATOR . $extras[self::EXT_NAME_KEY];
         } else {
+          
           // default path
           $targetDir = $package->getTargetDir();
-          return $basePath . ($targetDir ? '/'.$targetDir : '');
+          return (empty($basePath) ? '' : $basePapth . DIRECTORY_SEPARATOR) . $package->getPrettyName() . ($targetDir ? DIRECTORY_SEPARATOR . $targetDir : '');
         }
     }
     
